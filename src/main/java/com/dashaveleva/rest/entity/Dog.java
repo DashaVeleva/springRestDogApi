@@ -1,8 +1,12 @@
 package com.dashaveleva.rest.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.time.LocalDate;
+
 public class Dog {
     private String name; // 1-100 symbols
-    private int dateOfBirth; // must be before NOW, can be null
+    private LocalDate dateOfBirth; // must be before NOW - localdatetime, can be null
     private int height;
     private int weight;
 
@@ -19,11 +23,11 @@ public class Dog {
         this.name = name;
     }
 
-    public int getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(int dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
